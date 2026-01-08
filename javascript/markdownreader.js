@@ -80,6 +80,10 @@
 					document.title = defaultTitle;
 				}
 			}
+			// 渲染 Mermaid 图表
+			if (typeof renderMermaidDiagrams === 'function') {
+				renderMermaidDiagrams();
+			}
 		} catch (err) {
 			renderError('渲染失败', String(err));
 		}
